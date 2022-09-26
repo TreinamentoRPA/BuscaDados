@@ -1,0 +1,133 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Initialize_Applications" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1788,1624</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Initialization_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="35">
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Management.Automation</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="33">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Management.Automation</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>TimeSpan2</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="476,1559" sap2010:WorkflowViewState.IdRef="Sequence_9">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="434,118" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]" />
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Automation Anywhere - PO Tracking Login" sap:VirtualizedContainerService.HintSize="434,1259" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="1a79b3e8-a701-48a0-a6bc-bf043d3dfb02" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="376,1039" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="Login" />
+              <Variable x:TypeArguments="ss:SecureString" Name="Senha" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_Config(&quot;Login&quot;).ToString]" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="334,192" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[Senha]" Username="[Login]" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT inputEmail'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,224" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="1a79b3e8-a701-48a0-a6bc-bf043d3dfb02" Text="[Login]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://developer.automationanywhere.com/challenges/AutomationAnywhereLabs-POTrackingLogin.html" DesignTimeRectangle="732, 575, 453, 59" ElementType="InputBox" FriendlyName="'INPUT inputEmail'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='email' class='form-control' aaname='' /&gt;" Guid="85d04a7a-6fb5-49c1-ae5b-1e111010c985" ImageBase64="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" InformativeScreenshot="e64738bbc00444b37dbceb3359c78bd5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Automation Anywhere - PO Tracking Login' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT inputPassword'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,249" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="1a79b3e8-a701-48a0-a6bc-bf043d3dfb02" SecureText="[Senha]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://developer.automationanywhere.com/challenges/AutomationAnywhereLabs-POTrackingLogin.html" DesignTimeRectangle="732, 653, 453, 59" ElementType="InputBoxPassword" FriendlyName="'INPUT inputPassword'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' class='form-control' aaname='' /&gt;" Guid="8db2f234-08eb-4a28-bddc-1c437e2ff28f" ImageBase64="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" InformativeScreenshot="3cfbef9b5d812143f6a695cab49667ac.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Automation Anywhere - PO Tracking Login' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Sign in'" sap:VirtualizedContainerService.HintSize="334,160" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1a79b3e8-a701-48a0-a6bc-bf043d3dfb02" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://developer.automationanywhere.com/challenges/AutomationAnywhereLabs-POTrackingLogin.html" DesignTimeRectangle="732, 779, 453, 63" ElementType="Button" FriendlyName="'Sign in'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='button' class='btn btn-lg btn-primary btn-block text-uppercase' aaname='Sign                                 in' check:innerText='SIGN IN' /&gt;" Guid="122bf8d2-0f9c-43e6-a893-35782c939e19" ImageBase64="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" InformativeScreenshot="c2166c0cf2f6efdf0653609547edb45f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Automation Anywhere - PO Tracking Login' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-1928, -112, 1936, 1048" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="769bc75f896d4d00c7af7eaa889a82d9.png" Selector="&lt;html app='chrome.exe' title='Automation Anywhere - PO Tracking Login' /&gt;" Url="https://developer.automationanywhere.com/challenges/AutomationAnywhereLabs-POTrackingLogin.html" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
